@@ -1,0 +1,299 @@
+body {
+    max-width: 920px;
+    margin: auto;
+    font-family: 'Arimo', 'sans-serif';
+}
+
+ul {
+    padding-left:0;
+}
+
+a:visited {
+    color: black;
+}
+#top-info {
+    padding-top: 50px;
+}
+
+.logo-main {
+    width: 75px;
+}
+
+.head-name {
+    display: inline;
+    font-size: 2.3em;
+    margin:0;
+}
+
+.menu {
+    width:100%;
+    overflow: visible;
+    background-color: #506B85;
+}
+
+.menu ul {
+    list-style-type: none;
+    text-align: center;
+    width:100%;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    color:black;
+}
+
+.menu ul li a:hover {
+    color:white;
+}
+
+.menu ul li:first-of-type {
+    border-top:;
+}
+
+.cycle {
+    margin-top:20px;
+}
+
+blockquote p {
+    text-transform: uppercase;
+    font-family: 'Arimo';
+}
+
+blockquote h4 {
+    padding-bottom: 100px;
+    font-style:italic;
+}
+
+.box {
+    width: 29%;
+    display:inline-block;
+    border:1px solid black;
+    border-radius:5px;
+    min-height:100px;
+    margin-right:5%;
+    margin-bottom:200px;
+}
+
+.box:last-of-type {
+    margin-right:0;
+}
+
+.cta-text {
+    padding: 10px 0;
+    color:black;
+    font-weight:bold;
+    text-align:center;
+}
+#container {
+    white-space:nowrap;
+    text-align:center;
+}
+
+.box:hover {
+    background-color: #7CB2B3;
+}
+
+#footer {
+    width:100%;
+    overflow: visible;
+    background-color: #506B85;
+}
+
+#footer ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#footer li {
+    display: inline;
+}
+
+#footer ul li a {
+    text-decoration: none;
+    font-size: .9em;
+    display: inline-block;
+    padding: 4px 25px;
+    color:black;
+}
+
+#footer ul li a:hover {
+    color:white;
+}
+
+
+#footer li:first-child:before {
+content: none;
+}
+
+@media screen and (max-width: 830px) {
+body {
+    background-color:;
+}
+#top-info {
+     padding-top:0;
+}
+.logo-main {
+    width:55px;
+    padding:2%;
+}
+.head-name {
+    font-size:2em;
+    margin:auto;
+}
+#inside-nav {
+    width:70%;
+}
+}
+@media screen and (max-width:425px) {
+.head-name {
+     font-size:1.6em;   
+}
+.logo-main {
+    width:40px;
+}
+
+.toggle-nav {
+    color:black;
+}
+/*----- Toggle Button -----*/
+.toggle-nav {
+    display:none;
+}
+ 
+/*----- Menu -----*/
+@media screen and (min-width: 860px) {
+.menu {
+    width:100%;
+    border-radius:3px;
+}
+    
+}
+@media screen and (min-width:600px) {
+#inside-nav {
+    display:none;
+}
+}
+
+.menu ul {
+    display:inline-block;
+}
+
+@media screen and (max-width:600px) {
+#top-info {
+    display:none!important;
+}    
+
+#inside-nav {
+    font-size:.7em;
+    float:left;
+}
+
+.menu a {
+    padding:3%;
+}
+.head-name {
+    display:table-cell;
+    float:right;
+    margin-top:7%;
+}
+    
+}
+
+.menu li {
+    margin:0px 50px 0px 0px;
+    float:left;
+    list-style:none;
+    font-size:17px;
+}
+ 
+.menu li:last-child {
+    margin-right:0px;
+}
+ 
+.menu a {
+    text-decoration: none;
+}
+ 
+/menu a:hover, .menu .current-item a {
+    text-decoration:none;
+    color:white;
+}
+ 
+/*----- Responsive -----*/
+@media screen and (max-width: 1150px) {
+.wrap {
+    width:90%;
+}
+}
+ 
+ 
+@media screen and (max-width: 860px) {
+.menu {
+    position:relative;
+    display:inline-block;
+}
+ 
+.menu ul.active {
+    display:none;
+}
+ 
+.menu ul {
+    width:100%;
+    position:absolute;
+    left:0px;
+    background:#506B85;
+    margin:0;
+    top:100%;
+}
+ 
+/*.menu ul:after {
+    width:0px;
+    height:0px;
+    position:absolute;
+    top:0%;
+    right:11px;
+    content:'';
+    transform:translate(0%, -100%);
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-bottom:7px solid #303030;
+}*/
+ 
+.menu li {
+    margin:5px 0px 5px 0px;
+    display:block;
+    clear:both;
+}
+ 
+.menu a {
+    display:block;
+    font-size:23px;
+}
+ 
+.toggle-nav {
+    padding:6px 5px;
+    float:right;
+    display:inline-block;
+    }
+ 
+.toggle-nav:hover, .toggle-nav.active {
+    text-decoration:none;
+    position: relative;
+    z-index:4;
+}
+}
+
+@media screen and (max-width:650px) {
+.box {
+    width:100%;
+    margin:0;
+}
+
+}

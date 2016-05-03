@@ -1,14 +1,13 @@
 <html>
-<!-- WP head start -->
 <head>
     <title>Kandice's Dog Care - Home</title>
-    <link href="<?php bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet"/>
+    <link href="css/custom.css" type="text/css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/jquery.tosrus.min.all.js"></script>
-    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/jquery.tosrus.all.css"/>
+    <script type="text/javascript" src="js/jquery.tosrus.min.all.js"></script>
+    <link rel="stylesheet" href="css/jquery.tosrus.all.css"/>
     <script>
             jQuery(document).ready(function() {
             jQuery('.toggle-nav').click(function(e) {
@@ -35,16 +34,17 @@
             }).trigger( "next" );
             });
     </script>
+</body>
+    </script>
     </head>
-    <!-- WP head end -->
     <body>
         <div id="top-info">
-            <a href="index.html"><img src="<?php bloginfo('template_directory');?>/images/logo.png" class="logo-main" />
+            <a href="index.html"><img src="images/logo.png" class="logo-main" />
             <h1 class="head-name">Kandice's Dog Care</h1></a>
         </div>
     <nav class="menu">
         <div id="inside-nav">
-            <a href="index.html"><img src="<?php bloginfo('template_directory');?>/images/logo.png" class="logo-main" />
+            <a href="index.html"><img src="images/logo.png" class="logo-main" />
             <h1 class="head-name">Kandice's Dog Care</h1></a>
         </div>
     <ul class="active">
@@ -59,18 +59,11 @@
     <a class="toggle-nav" href="#">&#9776;</a>
 
 </nav>
-        <!-- WP content start -->
 <div id="content">
-    <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-    <?php the_content(''); ?>
-    <?php endwhile; endif; ?>
-    
-    
-    <!--
         <div id="wrapper">
-            <img src="<?php// bloginfo('template_directory');?>/images/img2.png" />
-            <img src="<?php// bloginfo('template_directory');?>/images/img5.png" />
-            <img src="<?php// bloginfo('template_directory');?>/images/img3.png" />
+            <img src="images/img2.png" />
+            <img src="images/img5.png" />
+            <img src="images/img3.png" />
         </div>
         <blockquote class="main-quote">
             <p><strong>"</strong>Kandice is a true dog lover! She provided regular updates and photos, <br>and I knew my dog was receiving the best of care and having a lot of fun too.<strong>"</strong></p>
@@ -96,9 +89,7 @@
             </div>
         </div>
     </div> 
-    -->
 </div>
-        <!-- WP content end -->
     <div id="footer">
         <ul>
             <li><a href="javascript:;">About</a></li>
