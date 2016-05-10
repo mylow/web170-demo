@@ -1,17 +1,31 @@
-<?php
-/**
- * The sidebar containing the main widget area.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package ving
- */
+<div id="service-2">
+        
+    <?php 
+    
+    if(is_page()) {
+    
+        if($post->post_parent){// check if page is parent...
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
-?>
+            echo '<h2>'.get_the_title($post->post_parent).'</h2>';
+            echo '<ul>';
+            wp_list_pages(array('title_li' => '', 'child_of' => $post->post_parent,)); //... list current page
+            echo '</ul>';
+        } else { // if page does not have a parent...
 
-<div id="secondary" class="widget-area col-lg-4 col-md-4 col-sm-4 col-xs-12" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</div><!-- #secondary -->
+            echo '<h2>'.get_the_title($post->ID).'</h2>';
+            echo '<ul>';
+            wp_list_pages(array('title_li' => '', 'child_of' => $post->ID,));// ... do this
+            echo '</ul>';
+        }
+    
+    }
+    
+    if(!(is_page())) {
+        
+        echo '<h2>Blog</h2>';
+        echo '<ul>';
+        wp_list_categories(array('title_li' => '',));
+        echo '</ul>';
+        }
+    ?>
+    </div>

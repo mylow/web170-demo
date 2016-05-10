@@ -1,64 +1,69 @@
-<?php
-/**
- * The header for our theme.
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package ving
- */
-
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <title><?php bloginfo('description'); ?> | <?php bloginfo('name');?></title>
+    <link href="<?php bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/jquery.tosrus.min.all.js"></script>
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/jquery.tosrus.all.css"/>
+    <script>
+            jQuery(document).ready(function() {
+            jQuery('.toggle-nav').click(function(e) {
+            jQuery(this).toggleClass('active');
+            jQuery('.menu ul').toggleClass('active');
+            e.preventDefault();
+            });
+        });
+    </script>
+    <script> 
+        $(document).ready(function() {
+          $("#wrapper").tosrus({
+            autoplay   : {
+            play       : true
+            },
+            slides     : {
+            scale      : "fill"
+            },
+            buttons    : true,
+            pagination : {
+            add        : true
+            },
+            timeout : 8000
+            }).trigger( "next" );
+            });
+    </script>
+    <!-- WP head start -->
+    <?php wp_head(); ?>
+    <!-- WP head end -->
+    </head>
+    <body <?php body_class();?>>
+        <div id="top-info">
+            <a href="<?php echo get_settings('home');?>"><img src="<?php bloginfo('template_directory');?>/images/logo.png" class="logo-main" />
+            <h1 class="head-name">Kandice's Dog Care</h1></a>
+        </div>
+    
+        <nav class="menu">
+        <div id="inside-nav">
+            <a href="index.php"><img src="<?php bloginfo('template_directory');?>/images/logo.png" class="logo-main" />
+            <h1 class="head-name">Kandice's Dog Care</h1></a>
+        </div>
+        
+        
+        <?php wp_nav_menu( array('theme_location' => 'main-menu', 'container' => 'nav', 'container_class' => 'menu',));?>
+        
+        
+    <!--<ul class="active">
+        <li><a href="#">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#">Availability</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>-->
+    
+ 
+    <a class="toggle-nav" href="#">&#9776;</a>
 
-<?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ving' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner">
-		<div id="header-image">
-			<?php	
-				if ( get_theme_mod( 'social' ) == true ) {
-					get_template_part('social');
-				}
-			?>
-			<div id="search-head">
-			<div id="search-icon">
-				<span class="fa-stack fa-lg">
-					  <i class="fa fa-circle fa-stack-2x"></i>
-					  <i class="fa fa-search fa-stack-1x fa-inverse"></i>
-				</span>
-			</div>
-			<div id="searchform">
-				<form method="get" id="searchform" action="<?php echo esc_url( home_url('/') ); ?>/">
-							<div><input type="text" size="18" value="" name="s" id="s" />
-							<button type="submit" class="search-submit"><?php _e('Search', 'ving'); ?></button>
-							</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="site-branding">
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif; ?>
-			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-		</div><!-- .site-branding -->
-	</header><!-- #masthead -->
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ving' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-
-	<div id="content" class="site-content container">
+</nav>

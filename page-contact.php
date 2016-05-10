@@ -1,15 +1,14 @@
   <?php get_header(); ?>
     <!-- WP content start -->
 <div id="content">
-    <div id="service-1">
+
     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-    <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-    <small>Posted in <?php the_category();?></small>
+    <h2><?php the_title(); ?></h2>
     <?php the_content(''); ?>
     <?php endwhile; endif; ?>
-    <p>single.php</p>
-    </div>
-<?php get_sidebar();?>
+        <p>page.php</p>
+
+
 </div>
 <!-- WP content end -->
 <?php get_footer(); ?>

@@ -16,6 +16,7 @@ body {
     margin:auto;
     font-family: 'Arimo', 'sans-serif';
     padding:0 5px;
+    overflow:hidden;
 }
 
 ul {
@@ -78,8 +79,18 @@ a:visited, .head-name a, .head-name a:visited, h1.head-name a {
     padding:10px 20px;
 }
 
+.menu ul li ul.sub-menu {
+    display: none;
+}
+
 .menu ul li a:hover {
     background-color:#7CB2B3;
+}
+
+.menu ul li.current-menu-item a,
+.menu ul li.current-menu-parent a {
+    color:white !important;
+    background-color:#7CB2B3 !important;
 }
 
 .cycle {
@@ -337,6 +348,10 @@ body {
 }
 #inside-nav {
     width:70%;
+}
+
+.menu ul li ul.sub-menu {
+    display: block;
 }
     
 #service-2 {
