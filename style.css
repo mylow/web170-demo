@@ -36,6 +36,10 @@ a:visited, .head-name a, .head-name a:visited, h1.head-name a {
     margin:auto;
 }
 
+# {
+    display: none;
+}
+
 .logo-main {
     width: 65px;
 }
@@ -60,6 +64,10 @@ a:visited, .head-name a, .head-name a:visited, h1.head-name a {
     width:920px;
     margin:auto;
     z-index: 10;
+}
+
+#menu-main-menu {
+    z-index: 11;
 }
 
 .menu ul li {
@@ -181,7 +189,6 @@ blockquote h4 {
     color:white;
 }
 
-
 #footer li:first-child:before {
 content: none;
 }
@@ -193,6 +200,21 @@ content: none;
 #service-1 {
     width:80%;
     float:left;
+}
+
+#service-1 h2 a {
+    color:black;
+    text-decoration: none;
+    border-bottom: 2px solid black;
+}
+
+#service-1 h2 a:hover {
+   border-bottom-color: #7CB2B3;
+}
+
+#service-1 h6 {
+    border-top: 1px solid black;
+    margin-bottom: 5em;
 }
 
 #service-2 {
@@ -524,8 +546,15 @@ body {
     margin-top:3%;
     margin-right:3%;
 }
+    
+.dropped-menu {
+    z-index: 10;
+    position: absolute;
+    top:0;
+    right:0;
+}
  
-.toggle-nav:hover, .toggle-nav.active {
+.toggle-nav a:hover, .toggle-nav a.active {
     text-decoration:none;
     position: relative;
     z-index:4;
