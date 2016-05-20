@@ -19,6 +19,17 @@ body {
     overflow:hidden;
 }
 
+#content img.attachment-thumbnail,
+#content img.size-thumbnail {
+    float:left;
+    margin: 0 20px 10px 0;
+}
+
+#content article.post-excerpt {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
 ul {
     padding-left:0;
 }
@@ -122,11 +133,10 @@ blockquote h4 {
 .box {
     width: 29%;
     display:inline-block;
-    border:1px solid black;
-    border-radius:5px;
     min-height:100px;
     margin-right:5%;
     margin-bottom:200px;
+    vertical-align: top;
 }
 
 .box img {
@@ -158,9 +168,9 @@ blockquote h4 {
     text-align:center;
 }
 
-.box:hover {
+/*.box:hover {
     background-color: #7CB2B3;
-}
+}*/
 
 #footer {
     width:100%;
@@ -209,7 +219,8 @@ content: none;
 }
 
 #service-1 h2 a:hover {
-   border-bottom-color: #7CB2B3;
+    border-bottom-color: #7CB2B3;
+    color:#7CB2B3;
 }
 
 #service-1 h6 {

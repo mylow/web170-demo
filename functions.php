@@ -10,9 +10,14 @@ Version: 0.0.1
 
 */
 
-
+//menu registry 
 register_nav_menus(array(
     'main-menu' => _('Menu'),
     ));
+
+
+//thumbnail support
+add_theme_support('post-thumbnails');
+
 
 ?>
