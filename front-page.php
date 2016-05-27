@@ -16,7 +16,7 @@
         
         
         <div class="box">
-            <div class="cta-text" onclick="location.href='about.php';" style="cursor: pointer;">
+            <div class="cta-text">
                 <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
                 <h2><?php the_title(); ?></h2>
                 <?php the_content(''); ?>
@@ -39,7 +39,7 @@
         
         
         <div class="box">
-            <div class="cta-text" onclick="location.href='contact.php';" style="cursor: pointer;">
+            <div class="cta-text">
                 <h3>Contact</h3>
                 <p><a href="tel:2065555555">(206)555.5555</a><br><a href="mailto:email@gmil.com">email@gmail.com</a><br><br></p>
             </div>

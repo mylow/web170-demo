@@ -16,6 +16,11 @@ register_nav_menus(array(
     ));
 
 
+//sidebar registry
+register_sidebars();
+
+
+
 //thumbnail support
 add_theme_support('post-thumbnails');
 
