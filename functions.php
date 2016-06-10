@@ -25,4 +25,63 @@ register_sidebars();
 add_theme_support('post-thumbnails');
 
 
+//my title tag
+
+function get_my_title_tag() {
+    
+    global $post;
+    
+    if (is_front_page()) { // front page
+        
+        bloginfo('description'); // get site tagline
+    
+    } elseif (is_page() || is_single() ){
+        
+        the_title(); //the page or post title
+        
+    } else {
+        
+        bloginfo('description');
+        
+    }
+    
+    echo ' | ';
+    bloginfo('name'); // site name
+    echo ' | '; // separator
+    echo 'Seattle, WA';
+    
+}
+
+
+ //add excerpt support for pages
+
+add_post_type_support( 'page', 'excerpt' );
+
+
+// add flexslider
+
+function get_flexslider () {
+    
+    echo '<div class="flexslider">';
+    echo '<ul class="slides">';
+    
+    echo '</ul>';
+    echo '</div>';
+    
+    
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 ?>

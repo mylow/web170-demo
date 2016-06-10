@@ -1,9 +1,10 @@
 <html>
 <head>
-    <title><?php bloginfo('description'); ?> | <?php bloginfo('name');?></title>
+    <title><?php get_my_title_tag();?></title>
     <link href="<?php bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/jquery.tosrus.min.all.js"></script>
@@ -20,23 +21,7 @@
             });
         });
     </script>
-   <!-- <script> 
-        $(document).ready(function() {
-          $("#wrapper").tosrus({
-            autoplay   : {
-            play       : true
-            },
-            slides     : {
-            scale      : "fill"
-            },
-            buttons    : true,
-            pagination : {
-            add        : true
-            },
-            timeout : 8000
-            }).trigger( "next" );
-            });
-    </script>-->
+   
     <script type="text/javascript" charset="utf-8">
         $(window).load(function() {
         $('.flexslider').flexslider();
